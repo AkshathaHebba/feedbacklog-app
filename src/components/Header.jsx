@@ -15,13 +15,13 @@ function Header({ text, bgColor, textColor }) {
     </header>
   )
 }
-
+//Setting the default prop types
 Header.defaultProps = {
   text: "Feedback UI",
   bgColor: "rgba(0,0,0,0.4)",
   textColor: "#ff6a95",
 }
-
+//Using to check the types of the props
 Header.propTypes = {
   text: PropTypes.string,
   bgColor: PropTypes.string,

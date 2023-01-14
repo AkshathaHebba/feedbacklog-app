@@ -14,7 +14,7 @@ import Card from './components/shared/Card'
 import Post from "./components/Post";
 
 function App() {
-  const [feedback,setFeedback] = useState(FeedbackData)
+  const [feedback,setFeedback] = useState(FeedbackData) //App level state
   return (
       <FeedbackProvider>
           <Router>
