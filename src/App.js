@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 //Browser Router - Html file history API to keep our UI with url
 import Header from './components/Header'
 import FeedbackStats from "./components/FeedbackStats";
-//import FeedbackData from './data/FeedbackData'
+import FeedbackData from './data/FeedbackData'
 import FeedbackList from "./components/FeedbackList"
 import FeedbackForm from "./components/FeedbackForm"
 import AboutPage from "./pages/AboutPage";
