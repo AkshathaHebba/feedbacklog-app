@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/components/FeedbackItem.jsx">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/context/FeedbackContext.js">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/index.js">
           <value>
             <Attribute>

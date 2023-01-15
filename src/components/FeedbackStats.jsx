@@ -2,13 +2,13 @@ import {useContext} from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackStats() {
-const {feedback} = useContext(FeedbackContext)
+const {feedback} = useContext(FeedbackContext) //Hooks
   // NOTE: simpler average calculation
   // Calculate ratings avg
   let average = Math.round(
     feedback.reduce((acc, cur) => {
         return acc + cur.rating
-    }, 0) / feedback.length
+    }, 0) / feedback.length //0 is the default for accumulator
   )
     average = average.toFixed(1).replace(/[.,]0$/, '')
 

@@ -20,7 +20,7 @@ function App() {
           <Router>
               <Header />
               <Routes>
-                  <Route exact path='/' element = {
+                  <Route exact path='/' element = { //exact - has to match exactly
                       <div className='container'>
                           <FeedbackForm/>
                           <FeedbackStats/>

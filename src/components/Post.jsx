@@ -11,7 +11,7 @@ function Post(){
     }
     return(
         <div>
-            <h1> POST}</h1>
+            <h1> POST</h1>
             <button onClick={onClick}>Click Me</button>
         </div>
     )

@@ -3,7 +3,7 @@ import {createContext, useState} from "react";
 import {v4 as uuidv4} from "uuid";
 
 const FeedbackContext = createContext();
-export const FeedbackProvider = ({children}) =>{
+export const FeedbackProvider = ({children}) =>{ //need to wrap everything in a provider
     const [feedback,setFeedback] = useState([
         {
             id : 1,
@@ -28,7 +28,7 @@ export const FeedbackProvider = ({children}) =>{
     ])
     //Edit Feedback state
     const [feedbackEdit,setFeedbackEdit] = useState({
-        item: {},
+        item: {},//default values
         edit: false
         }
     );
@@ -45,6 +45,10 @@ export const FeedbackProvider = ({children}) =>{
             setFeedback(feedback.filter((item) => item.id !== id))
         }
     }
+    //update Feedback
+    const updateFeedback = (id,updItem) =>{
+        setFeedback(feedback.map((item) => item.id === id ? {...item, ...updItem} : item))
+    }
     const addFeedBack = (newFeedBack) => {
         newFeedBack.id = uuidv4()
         setFeedback([newFeedBack,...feedback])
@@ -52,11 +56,12 @@ export const FeedbackProvider = ({children}) =>{
     }
 
     return (
-        <FeedbackContext.Provider value={{
+        <FeedbackContext.Provider value={{ //Any state or function we use will be passed here as value
             feedback,
             deleteFeedback,
             addFeedBack,
             editFeedback,
+            updateFeedback,
             feedbackEdit
         }}>
             {children}

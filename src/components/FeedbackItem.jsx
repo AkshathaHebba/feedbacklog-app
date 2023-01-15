@@ -1,11 +1,11 @@
-import { FaTimes, FaEdit} from 'react-icons/fa'
+import { FaTimes, FaEdit} from 'react-icons/fa' //FaTimes - 'x'
 import PropTypes from 'prop-types'
 import Card from './shared/Card'
 import {useContext} from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackItem({ item }) {
-const {deleteFeedback,editFeedback} = useContext(FeedbackContext);
+const {deleteFeedback,editFeedback} = useContext(FeedbackContext);//pulling out deletefeedback and editfeedback from usecontext
   return (
     <Card>
       <div className='num-display'>{item.rating}</div>

@@ -4,6 +4,7 @@ import FeedbackContext from "../context/FeedbackContext";
 function RatingSelect({select}){
     const [selected,setSelected] = useState(10)
     const {feedbackEdit} = useContext(FeedbackContext)
+    //When edit button is clicked - go to edit mode and set the rating
     useEffect(()=>{
         setSelected(feedbackEdit.item.rating);
     },[feedbackEdit])
